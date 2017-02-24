@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-  s.name                = "React"
+  s.name                = "WMReact"
   s.version             = "0.40.0"
   s.summary             = "fadsfa"
   s.description         = <<-DESC
-                            React Native apps are built using the React JS
+                            WMReact Native apps are built using the WMReact JS
                             framework, and render directly to native UIKit
                             elements using a fully asynchronous architecture.
                             There is no browser and no HTML. We have picked what
@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
   s.preserve_paths      = "cli.js", "Libraries/**/*.js", "lint", "linter.js", "node_modules", "package.json", "packager", "PATENTS", "react-native-cli"
 
   s.subspec 'Core' do |ss|
-    ss.dependency      'React/yoga'
-    ss.dependency      'React/cxxreact'
+    ss.dependency      'WMReact/yoga'
+    ss.dependency      'WMReact/cxxreact'
     ss.source_files  = "React/**/*.{c,h,m,mm,S}"
     ss.exclude_files = "**/__tests__/*", "IntegrationTests/*", "ReactCommon/yoga/*"
     ss.frameworks    = "JavaScriptCore"
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'cxxreact' do |ss|
-    ss.dependency     'React/jschelpers'
+    ss.dependency     'WMReact/jschelpers'
     ss.source_files = 'ReactCommon/cxxreact/{JSBundleType,oss-compat-util}.{cpp,h}'
     ss.header_dir   = 'cxxreact'
   end
@@ -52,91 +52,91 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'ART' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/ART/**/*.{h,m}"
     ss.preserve_paths = "Libraries/ART/**/*.js"
   end
 
   s.subspec 'RCTActionSheet' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/ActionSheetIOS/*.{h,m}"
     ss.preserve_paths = "Libraries/ActionSheetIOS/*.js"
   end
 
   s.subspec 'RCTAdSupport' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/AdSupport/*.{h,m}"
     ss.preserve_paths = "Libraries/AdSupport/*.js"
   end
 
   s.subspec 'RCTAnimation' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/NativeAnimation/{Drivers/*,Nodes/*,*}.{h,m}"
   end
 
   s.subspec 'RCTCameraRoll' do |ss|
-    ss.dependency       'React/Core'
-    ss.dependency       'React/RCTImage'
+    ss.dependency       'WMReact/Core'
+    ss.dependency       'WMReact/RCTImage'
     ss.source_files   = "Libraries/CameraRoll/*.{h,m}"
     ss.preserve_paths = "Libraries/CameraRoll/*.js"
   end
 
   s.subspec 'RCTGeolocation' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/Geolocation/*.{h,m}"
     ss.preserve_paths = "Libraries/Geolocation/*.js"
   end
 
   s.subspec 'RCTImage' do |ss|
-    ss.dependency       'React/Core'
-    ss.dependency       'React/RCTNetwork'
+    ss.dependency       'WMReact/Core'
+    ss.dependency       'WMReact/RCTNetwork'
     ss.source_files   = "Libraries/Image/*.{h,m}"
     ss.preserve_paths = "Libraries/Image/*.js"
   end
 
   s.subspec 'RCTNetwork' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/Network/*.{h,m,mm}"
     ss.preserve_paths = "Libraries/Network/*.js"
   end
 
   s.subspec 'RCTPushNotification' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/PushNotificationIOS/*.{h,m}"
     ss.preserve_paths = "Libraries/PushNotificationIOS/*.js"
   end
 
   s.subspec 'RCTSettings' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/Settings/*.{h,m}"
     ss.preserve_paths = "Libraries/Settings/*.js"
   end
 
   s.subspec 'RCTText' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/Text/*.{h,m}"
     ss.preserve_paths = "Libraries/Text/*.js"
   end
 
   s.subspec 'RCTVibration' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/Vibration/*.{h,m}"
     ss.preserve_paths = "Libraries/Vibration/*.js"
   end
 
   s.subspec 'RCTWebSocket' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/WebSocket/*.{h,m}"
     ss.preserve_paths = "Libraries/WebSocket/*.js"
   end
 
   s.subspec 'RCTLinkingIOS' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/LinkingIOS/*.{h,m}"
   end
 
   s.subspec 'RCTTest' do |ss|
-    ss.dependency       'React/Core'
+    ss.dependency       'WMReact/Core'
     ss.source_files   = "Libraries/RCTTest/**/*.{h,m}"
     ss.preserve_paths = "Libraries/RCTTest/**/*.js"
     ss.frameworks     = "XCTest"
