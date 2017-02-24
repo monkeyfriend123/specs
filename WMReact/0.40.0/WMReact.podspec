@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.license             = "MIT"
   s.author              = "Facebook"
   s.source              = { :git => "https://github.com/facebook/react-native.git", :tag => "v#{s.version}" }
-  s.default_subspec     = 'Core'
   s.requires_arc        = true
   s.platform            = :ios, "8.0"
   s.pod_target_xcconfig = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++14" }
