@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name                = "React"
   s.version             = "0.40.0"
-  s.summary             = package['description']
+  s.summary             = "fadsfa"
   s.description         = <<-DESC
                             React Native apps are built using the React JS
                             framework, and render directly to native UIKit
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
                             quality or capability.
                          DESC
   s.homepage            = "http://facebook.github.io/react-native/"
-  s.license             = package['license']
+  s.license             = "MIT"
   s.author              = "Facebook"
   s.source              = { :git => "https://github.com/facebook/react-native.git", :tag => "v#{s.version}" }
   s.default_subspec     = 'Core'
